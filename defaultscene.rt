@@ -1,0 +1,46 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    defaultscene.rt                                    :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jihoon <marvin@42.fr>                      +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/02/23 17:37:18 by jihoon            #+#    #+#              #
+#    Updated: 2021/04/22 16:07:45 by jihokim          ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+# resolution(R)		: width  height
+# anbience_light(A)	: brightness  color
+
+R	1280	720
+A	0.01		255,255,255
+
+# cameras	: view_point  direction  view_angle
+
+c	0,0,5		0,0,1			90
+c	-6,9,9		-1.5,1,-2		55
+
+# plane(pl)		: center_coordinate  norm
+# square(sq)	: center_coordinate  norm  length_of_side
+# triangle(tr)	: coordinate_1  coordinate_2  coordinate_3
+# cylinder(cy)	: center_of_bottom  norm  radius  height
+# sphere(sp)	: center_coordinate  radius
+# type  name   object's_properties*    textured color material_type fuzziness
+
+sp	ground	0,-51,-1		50			1	0.8,1,0.8	n	0.5
+sp	light	100,100,0		100			0	10,10,10	l	1
+sp	c_1		0,-0.66,-5		0.5			0	1,1,1		n	1
+sp	c_2		0.35,-0.24,-5	0.2			0	3,3,3		l	1
+sp	c_3		-0.35,-0.24,-5	0.2			0	3,3,3		l	1
+sp	l_1		-1.2,-0.67,-5	0.5			0	1,1,1		g	0
+sp	l_2		-0.85,-0.25,-5	0.2			0	3,0,0		l	0.1
+sp	l_3		-1.55,-0.25,-5	0.2			0	3,0,0		l	0.1
+sp	r_1		1.2,-0.67,-5	0.5			0	1,1,1		m	0
+sp	r_2		1.55,-0.25,-5	0.2			0	1,1,0.5		m	0.3
+sp	r_3		0.85,-0.25,-5	0.2			0	1,1,0.5		m	0.3
+
+#pl  pp		0,-5,-10			0,1,0				0 0.1,0,0			n	0.5
+sq  ss		0,1,-10			1,1,-1		1				0 0.1,0,0.5			n	0.5
+tr	tt		1,0.8,-1		2,1,-1		2.5,0,-1		0 0.2,0.6,0.2		n	0.5
+cy	cc		0,-0.5,-1			0,1,0	0.3		1			0 0.7,0.7,0.7		m	1
